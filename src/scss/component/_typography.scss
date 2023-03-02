@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;400&family=Source+Sans+Pro:wght@200;300;400&display=swap');
+
+h1, h2, h3, h4 {
+  font-family: "Lexend Deca";
+}
+
+h1 {
+  color: $white;;
+}
+
+p {
+  font-family: "Source Sans Pro";
+}
+
+.heading-product,
+.feature-heading,
+.text-login {
+  text-align:center;
+  padding: 40px;
+}
+
+.text-login {
+  text-align:center;
+  padding: 25px;
+}
+
+.feature-heading,
+.heading-product{
+  font-size: 58px;
+  font-weight: 600;
+  background-image: linear-gradient(to left, $primary, $secondary);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.hero-text {
+  color: $white;;
+  text-align: center;
+}
+
+.hero-feature {
+  color: $primary;
+  box-shadow: 2px 2px 5px $shadow-tint;
+}
+

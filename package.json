@@ -1,0 +1,24 @@
+{
+  "name": "semester-2",
+  "version": "1.0.0",
+  "description": "Semester project 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass src/scss:dist/css",
+    "watch": "sass --watch src/scss:dist/css & live-server"
+  },
+  "keywords": [
+    "bootstrap",
+    "sass"
+  ],
+  "author": "Heine Günther",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "sass": "^1.55.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.1"
+  }
+}

@@ -1,0 +1,65 @@
+body {
+  background-color: #2B2B26;
+}
+
+.hero-image {
+  max-width: 100%;
+  min-height: 450px;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.form-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+ 
+}
+
+.logo-img {
+  max-width: 80px;
+}
+
+.results,
+.featured-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+
+.icon {
+  font-size: 25px;
+  margin-left: 15px;
+}
+
+.card {
+  width: 90%;
+  margin: 0 auto; 
+  float: none;
+  margin-bottom: 20px; 
+  background-color: $background-colour;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.search,
+.btn-lg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.form-floating {
+  padding-bottom: 10px;
+}
+
+.cart-header {
+  text-align: center;
+  padding-top:40px;
+}

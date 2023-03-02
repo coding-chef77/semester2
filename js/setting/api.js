@@ -1,0 +1,1 @@
+export const baseUrl = "https://prinsdal-strapi-api.herokuapp.com/api/";

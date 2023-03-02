@@ -1,0 +1,13 @@
+// Bootstrap overrides
+@import "variables";
+
+
+// Bootstrap styles
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+// Original Styles
+@import "./component/typography";
+@import "./component/layout";
+@import "./component/navbar";
+@import "./component/loader"
