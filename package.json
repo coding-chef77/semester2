@@ -15,10 +15,10 @@
   "author": "Heine Günther",
   "license": "ISC",
   "devDependencies": {
-    "live-server": "^1.2.2",
+    "live-server": "^1.1.0",
     "sass": "^1.55.0"
   },
   "dependencies": {
-    "bootstrap": "^5.2.1"
+    "bootstrap": "^5.2.3"
   }
 }
