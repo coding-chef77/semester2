@@ -7,14 +7,14 @@ const resultContainer = document.querySelector(".results");
 const searchBar = document.querySelector(".search");
 
 const productUrl = baseUrl + "?populate=image";
-
+console.log(productUrl);
 async function getProducts() {
   try {
     const response = await fetch(productUrl);
     const results = await response.json();
 
     const products = results.data;
-
+    console.log(products);
     renderProducts(products);
     // searchProduct(products);
     //I would like to import this function, but I can't make it work that way!//
