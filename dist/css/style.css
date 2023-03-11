@@ -1,6 +1,6 @@
 /* Error: Can't find stylesheet to import.
  *   ,
- * 6 | @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+ 6 | @import "../../node_modules/bootstrap/scss/bootstrap.scss";
  *   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  *   '
  *   src/scss/style.scss 6:9  root stylesheet */

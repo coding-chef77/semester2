@@ -14,7 +14,7 @@ async function getProducts() {
     const results = await response.json();
 
     const products = results.data;
-    console.log(products);
+
     renderProducts(products);
     // searchProduct(products);
     //I would like to import this function, but I can't make it work that way!//
