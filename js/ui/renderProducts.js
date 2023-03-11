@@ -1,11 +1,6 @@
 export function renderProducts(products) {
   const resultContainer = document.querySelector(".results");
-<<<<<<< HEAD
   const imageUrl = "http://localhost:1337";
-=======
-
-  
->>>>>>> parent of 1684b47 (Change API)
   resultContainer.innerHTML = "";
 
   products.forEach(function (product) {
@@ -13,16 +8,12 @@ export function renderProducts(products) {
                                   <div class="col-12 col-md-6 col-lg-4">
                                     <div class="card">
 <<<<<<< HEAD
-<<<<<<< HEAD
                                     <img alt="picture related to product" class="card-img-top" src=${imageUrl}${product.attributes.image.data[0].attributes.url} width="200" />
                                     <div class="card-body">
                                       <h5 class="card-title">${product.attributes.title}</h5>
                                       <p>${product.attributes.description}</p>
 =======
                                     <img alt="picture related to product" class="card-img-top" src=${product.attributes.image}/>
-=======
-                                    <img alt="picture related to product" class="card-img-top" ${product.attributes.image}/>
->>>>>>> parent of 1684b47 (Change API)
                                     <div class="card-body">
                                       <h5 class="card-title">${product.attributes.title}</h5>
                                       
@@ -35,4 +26,3 @@ export function renderProducts(products) {
                                   `;
   });
 }
-

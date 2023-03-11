@@ -1,10 +1,9 @@
 import { baseUrl } from "./setting/api.js";
-import { displayMessage } from "./ui/displayMessage.js"; 
+import { displayMessage } from "./ui/displayMessage.js";
 
 const container = document.querySelector(".featured-container");
 const heroContainer = document.querySelector(".hero-image");
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 const productUrl = baseUrl + "?populate=image";
 const imageUrl = "http://localhost:1337";
@@ -12,9 +11,6 @@ const heroUrl = "http://localhost:1337/api/landing-page-image?populate=*";
 =======
 const productUrl = baseUrl + "populate=image";
 >>>>>>> parent of 26e478b (Changed patways)
-=======
-const productUrl = baseUrl + "products?populate=image";
->>>>>>> parent of 1684b47 (Change API)
 
 async function getProducts() {
   try {
@@ -49,11 +45,7 @@ async function getProducts() {
         container.innerHTML += `
                               <div class="col-12 col-md-6 col-lg-4">   
                                 <div class="card">                             
-<<<<<<< HEAD
                                 <img alt="picture related to product" class="card-img-top" src=${imageUrl}${speaker.attributes.image.data[0].attributes.url} width="200" />
-=======
-                                <img alt="picture related to product" class="card-img-top" ${speaker.attributes.image.data[0].attributes.url}/>
->>>>>>> parent of 1684b47 (Change API)
                                 <div class="card-body">
 <<<<<<< HEAD
                                   <h5 class="card-title">${speaker.attributes.title}</h5>   
@@ -71,13 +63,12 @@ async function getProducts() {
                               `;
       }
     });
-   
-     
   } catch (error) {
     container.innerHTML = displayMessage(
       "danger",
       "Ouf, something went wrong!"
     );
-} }
+  }
+}
 
 getProducts();
