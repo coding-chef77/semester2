@@ -6,7 +6,7 @@ import { displayMessage } from "./ui/displayMessage.js";
 const resultContainer = document.querySelector(".results");
 const searchBar = document.querySelector(".search");
 
-const productUrl = baseUrl + "?populate=image";
+const productUrl = baseUrl + "products?populate=image";
 
 async function getProducts() {
   try {
@@ -21,12 +21,10 @@ async function getProducts() {
 
     searchBar.onkeyup = function (event) {
       const searchValue = event.target.value.trim().toLowerCase();
+      
 
       const filteredProducts = products.filter(function (product) {
-        if (
-          product.attributes.title.toLowerCase().includes(searchValue) ||
-          product.attributes.description.toLowerCase().includes(searchValue)
-        ) {
+        if (product.attributes.title.toLowerCase().includes(searchValue) || (product.attributes.description.toLowerCase().includes(searchValue)))  {
           return true;
         }
       });
