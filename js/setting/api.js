@@ -1,1 +1,1 @@
-export const baseUrl = "https://prinsdal-strapi-api.herokuapp.com/api/";
+export const baseUrl = "http://localhost:1337/api/products";
