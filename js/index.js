@@ -7,7 +7,7 @@ const resultContainer = document.querySelector(".results");
 const searchBar = document.querySelector(".search");
 
 const productUrl = baseUrl + "?populate=image";
-console.log(productUrl);
+
 async function getProducts() {
   try {
     const response = await fetch(productUrl);
