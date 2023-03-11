@@ -1,14 +1,13 @@
 export function renderProducts(products) {
   const resultContainer = document.querySelector(".results");
 
-  
   resultContainer.innerHTML = "";
 
   products.forEach(function (product) {
     resultContainer.innerHTML += `
                                   <div class="col-12 col-md-6 col-lg-4">
                                     <div class="card">
-                                    <img alt="picture related to product" class="card-img-top" ${product.attributes.image}/>
+                                    <img alt="picture related to product" class="card-img-top" src=${product.attributes.image}/>
                                     <div class="card-body">
                                       <h5 class="card-title">${product.attributes.title}</h5>
                                       
@@ -20,4 +19,3 @@ export function renderProducts(products) {
                                   `;
   });
 }
-

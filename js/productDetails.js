@@ -7,14 +7,13 @@ const title = document.querySelector(".new-title");
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 
-
 const id = params.get("_id");
 
 if (!id) {
   document.location.href = "products.html";
 }
 
-const url = baseUrl + "products?populate=image/" + id;
+const url = baseUrl + "?populate=image/" + id;
 
 async function getproductDetails() {
   try {
@@ -22,7 +21,7 @@ async function getproductDetails() {
     const results = await response.json();
 
     const products = results.data;
-    createHtml(products)
+    createHtml(products);
   } catch (error) {
     productDetails.innerHTML = displayMessage(
       "danger",
@@ -33,8 +32,7 @@ async function getproductDetails() {
 getproductDetails();
 
 function createHtml(product) {
-
-  productDetails.innerHTML =  ` 
+  productDetails.innerHTML = ` 
   <div class="col-12 col-md-6 col-lg-4">
     <div class="card">
     <img alt="picture related to product" class="card-img-top" ${product.attributes.image}/>
@@ -46,7 +44,5 @@ function createHtml(product) {
       </div>
     </div>
   </div>`;
-title.innerHTML = `${product.attributes.title}`;
+  title.innerHTML = `${product.attributes.title}`;
 }
-
-
