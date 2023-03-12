@@ -6,7 +6,7 @@ import { displayMessage } from "./ui/displayMessage.js";
 const resultContainer = document.querySelector(".results");
 const searchBar = document.querySelector(".search");
 
-const productUrl = baseUrl + "products?populate=image";
+const productUrl = baseUrl + "?populate=image";
 
 async function getProducts() {
   try {
@@ -16,15 +16,16 @@ async function getProducts() {
     const products = results.data;
 
     renderProducts(products);
-    // searchProduct(products);
-    //I would like to import this function, but I can't make it work that way!//
+    // searchProducts(products);
 
     searchBar.onkeyup = function (event) {
       const searchValue = event.target.value.trim().toLowerCase();
-      
 
       const filteredProducts = products.filter(function (product) {
-        if (product.attributes.title.toLowerCase().includes(searchValue) || (product.attributes.description.toLowerCase().includes(searchValue)))  {
+        if (
+          product.attributes.title.toLowerCase().includes(searchValue) ||
+          product.attributes.description.toLowerCase().includes(searchValue)
+        ) {
           return true;
         }
       });
