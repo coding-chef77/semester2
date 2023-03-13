@@ -47,8 +47,20 @@ function createHtml(product) {
   cart.addEventListener("click", () => {
     addTooCart();
   });
+
   function addTooCart() {
-    let itemNumbers = localStorage.getItem("cartItem");
-    localStorage.setItem("cartItem", 1);
+    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    let itemExists = cartItems.some((item) => item.id === product.id);
+    if (!itemExists) {
+      cartItems.push({
+        id: product.id,
+        title: product.attributes.title,
+        price: product.attributes.price,
+      });
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      alert(`${product.attributes.title} added to cart`);
+    } else {
+      alert(`${product.attributes.title} is already in the cart`);
+    }
   }
 }
