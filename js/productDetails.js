@@ -5,8 +5,7 @@ const productDetails = document.querySelector(".product-details");
 const title = document.querySelector(".new-title");
 
 const params = new URLSearchParams(window.location.search);
-const id = params.get("id"); // retrieve the value of the "id" parameter
-console.log(id); // check if the "id" parameter is present in the URL
+const id = params.get("id");
 
 const imageUrl = "http://localhost:1337";
 const url = `${baseUrl}/${id}?populate=image`;
@@ -37,9 +36,19 @@ function createHtml(product) {
           <h5 class="card-title">${product.attributes.title}</h5>
           <p class="card-text">${product.attributes.description}</p>
           <p>$ ${product.attributes.price}</p>
-          <a href="products.html" class="btn btn-primary">Add to cart</a>
+          <a class="btn btn-primary">Add to cart</a>
         </div>
       </div>
     </div>`;
   title.innerHTML = `${product.attributes.title}`;
+
+  const cart = productDetails.querySelector(".btn-primary");
+
+  cart.addEventListener("click", () => {
+    addTooCart();
+  });
+  function addTooCart() {
+    let itemNumbers = localStorage.getItem("cartItem");
+    localStorage.setItem("cartItem", 1);
+  }
 }
