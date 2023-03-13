@@ -13,7 +13,7 @@ export function renderProducts(products) {
         <p class="card-text">${product.attributes.description}</p>
         <div class="d-flex justify-content-between align-items-center">
           <p class="card-price">$${product.attributes.price}</p>
-          <a href="product-details.html?id=${product.attributes.id}" class="btn btn-primary">See more</a>
+          <a href="product-details.html?id=${product.id}" class="btn btn-primary">See more</a>
         </div>
       </div>
     </div>
