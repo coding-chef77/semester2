@@ -24,6 +24,7 @@ function displayCartItems(cartItems) {
   cartItems.forEach((item) => {
     const itemHtml = `
     <div class="cart-container bg-white">
+    
       <div class="cart-item row" data-id="${item.id}">
           <div class="col-12 col-md-3">   
             </div>
